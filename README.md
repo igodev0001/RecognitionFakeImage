@@ -15,7 +15,7 @@ Using machine learning to detect digitally altered images with Error Level Analy
 
 ## Introduction: <a id="intro"></a>
 
-Recently I read an article from The Verge titled "[Artificial Intelligence is going to make it easier than ever to fake images and videos](https://www.theverge.com/2016/12/20/14022958/ai-image-manipulation-creation-fakes-audio-video)".  From experience, I have personally seen fake images, usually photoshopped, being retweeted, and shared among my social feed.  As the Verge article suggests, there is a proliferation of realistic fakes mainly due to how easy it is to create fakes by leveraging machine learning tools.  These images can seriously look very realistic.
+Recently I read an article from The Verge titled "[Artificial Intelligence is going to make it easier than ever to fake images and videos]".  From experience, I have personally seen fake images, usually photoshopped, being retweeted, and shared among my social feed.  As the Verge article suggests, there is a proliferation of realistic fakes mainly due to how easy it is to create fakes by leveraging machine learning tools.  These images can seriously look very realistic.
 
 ![Aricle-Clip](images/article_snippet_fake.png "Article Clip")
 
@@ -148,7 +148,6 @@ Ultimately, I believe that ELA can complement other existing verification techni
 
 
 Check it out...
-### [http://www.isthisimagefake.com](http://www.isthisimagefake.com)
 
 ![React](images/react.png "React")
 
@@ -163,13 +162,6 @@ Check it out...
 ![Screen2](images/screen2.png "Screen2")
 
 ![Screen3](images/screen3.png "Screen3")
-
-## References: <a id='ref'></a>
-
-* [https://ijcsits.org/papers/vol7no22017/4vol7no2.pdf](https://https://ijcsits.org/papers/vol7no22017/4vol7no2.pdf)
-* [https://fotoforensics.com/tutorial-ela.php](https://fotoforensics.com/tutorial-ela.php)
-* [http://cs231n.github.io/convolutional-networks/](http://cs231n.github.io/convolutional-networks/)
-
 
 ## Steps:
 1) Get all real images
