@@ -7,11 +7,11 @@ The implications of a fake image being distributed from the internet can easily 
 
 #### Challenges: <a id="challenges"></a>
 
-Just using machine learning models by itself isn't enough to classify if an image was fake.  There isn't a common factor among the fake images for the machine to learn from.  We will have to feed our model another type of image instead of the original one.  Enter Error Level Analysis.
+Just using machine learning models by itself isn't enough to classify if an image was fake.  There isn't a common factor among the fake images for the machine to learn from.  I will have to feed our model another type of image instead of the original one.  Enter Error Level Analysis.
 
 ## Error Level Analysis: <a id="ela"></a>
 
-It is a forensic method to identify portions of an image that has different levels of compression.  It will allow us to see areas of a photo that has been altered or changed.  We can use this technique to determine if a picture has been digitally modified.  The added fake contents (layers) on top of an image is different from that of the original image and most importantly, ELA can detect this.  If an image has not been modified, the altered grid should be at a higher error potential in respect to the remaining part of the image.
+It is a forensic method to identify portions of an image that has different levels of compression.  It will allow us to see areas of a photo that has been altered or changed.  we can use this technique to determine if a picture has been digitally modified.  The added fake contents (layers) on top of an image is different from that of the original image and most importantly, ELA can detect this.  If an image has not been modified, the altered grid should be at a higher error potential in respect to the remaining part of the image.
 
 It works by re-saving the image at 90% - 95% compression and compares the difference between the original and the compressed.  Modified areas are easily seen in the ELA representation.
 
