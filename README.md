@@ -1,17 +1,9 @@
-# Is this image fake?
+# Recognition fake images?
 
 Using machine learning to detect digitally altered images with Error Level Analysis.
 
 
-
-Recently I read an article from The Verge titled "[Artificial Intelligence is going to make it easier than ever to fake images and videos]".  From experience, I have personally seen fake images, usually photoshopped, being retweeted, and shared among my social feed.  As the Verge article suggests, there is a proliferation of realistic fakes mainly due to how easy it is to create fakes by leveraging machine learning tools.  These images can seriously look very realistic.
-
-![Aricle-Clip](images/article_snippet_fake.png "Article Clip")
-
-<sup>Source: [Gizmodo](https://gizmodo.com/29-viral-photos-and-gifs-from-2017-that-were-totally-fa-1821440079)</sup>
-
-
-I was curious, if machine learning enables the ability to create fakes, can I use machine learning to detect if an image was fake?  The implications of a fake image being distributed from the internet can easily sway a person's opinion and boost one's agenda.  I thought this was an issue worth tackling.
+The implications of a fake image being distributed from the internet can easily sway a person's opinion and boost one's agenda.  I thought this was an issue worth tackling.
 
 #### Challenges: <a id="challenges"></a>
 
@@ -19,18 +11,14 @@ Just using machine learning models by itself isn't enough to classify if an imag
 
 ## Error Level Analysis: <a id="ela"></a>
 
-One powerful open sourced algorithm to help us is called Error Level Analysis.
-
 It is a forensic method to identify portions of an image that has different levels of compression.  It will allow us to see areas of a photo that has been altered or changed.  We can use this technique to determine if a picture has been digitally modified.  The added fake contents (layers) on top of an image is different from that of the original image and most importantly, ELA can detect this.  If an image has not been modified, the altered grid should be at a higher error potential in respect to the remaining part of the image.
 
-ELA works by re-saving the image at 90% - 95% compression and compares the difference between the original and the compressed.  Modified areas are easily seen in the ELA representation.
+It works by re-saving the image at 90% - 95% compression and compares the difference between the original and the compressed.  Modified areas are easily seen in the ELA representation.
 
 ![Original](images/ela1.png "Original")(Image in question)
 ![ELA](images/ela2.png "ELA")(ELA representation)
 
 Using the ELA image, we now can have a *common factor* among the fake images in hopes that our model can learn these signals.  Since reading ELA images requires a trained eye as the image can produce a wide range of variations, and painfully the process is not automated, we can leverage machine learning models to assist us.
-
-<sup>Note: This technique is not perfect and we will go over the caveats in the 'What's next?' section.</sup>
 
 
 ## Data Flow: <a id="data"></a>
