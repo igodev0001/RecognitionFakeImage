@@ -2,18 +2,7 @@
 
 Using machine learning to detect digitally altered images with Error Level Analysis.
 
-## Table of Contents
 
-* [Introduction](#intro)
-* [Error Level Analysis](#ela)
-* [Data Flow](#data)
-* [Model Selection](#selection)
-* [Convolutional Neural Network](#cnn)
-* [Results](#results)
-* [What's Next?](#next)
-* [References](#ref)
-
-## Introduction: <a id="intro"></a>
 
 Recently I read an article from The Verge titled "[Artificial Intelligence is going to make it easier than ever to fake images and videos]".  From experience, I have personally seen fake images, usually photoshopped, being retweeted, and shared among my social feed.  As the Verge article suggests, there is a proliferation of realistic fakes mainly due to how easy it is to create fakes by leveraging machine learning tools.  These images can seriously look very realistic.
 
@@ -134,38 +123,3 @@ This is indicative a good model.  Because of the limitations of Error Level Anal
 Measuring loss function is very important as it is used to measure the inconsistency between predicted values.  It implies how well or poorly the model behaves after each iteration of optimization.  Ideally, we should expect the reduction of loss after several iterations.  
 
 As the loss value converges around 20 epochs, the test accuracy is greater than training accuracy.  This means that the model has generalized very well with 94% accuracy.
-
-
-
-## What's next?: <a id='next'></a>
-
-We were able to get a relatively high accuracy by using Convolutional Neural Networks.  Even other models such as Gradient Boosting and Random Forest performed reasonably well.  I believe this has much to do with the data preprocessing steps.  We were able to apply Error Level Analysis on the images to give our models some signal or common factor between fake and real images.
-
-**However, Error Level Analysis is not perfect.** As successive re-save operation occurs, the error level will decrease over time.  After a number of re-saves, the grid square reaches its minimum error level making it harder to detect the layers that were digitally touched.
-
-Ultimately, I believe that ELA can complement other existing verification techniques.  Other algorithms that we can implement are clone detection, noise analysis, and even reading image metadata.
-
-
-
-Check it out...
-
-![React](images/react.png "React")
-
-![Flask](images/python-flask.png "React")
-
-![Keras](images/keras.jpg "React")
-
----
-
-![Screen1](images/screen1.png "Screen1")
-
-![Screen2](images/screen2.png "Screen2")
-
-![Screen3](images/screen3.png "Screen3")
-
-## Steps:
-1) Get all real images
-2) Get all the fake images.  If from imgur, use "gen-imgur-csv.py".
-3) Download the images from CSV. "download_images_from_csv.py"
-4) Generate ela images by "ela-image.py"
-5) Resize ela images by "resize-images.py"
